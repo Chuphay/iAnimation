@@ -63,7 +63,7 @@ based upon its previous position."""
             line = line.strip()
             if(line == ''):
                 continue
-            if(line[:len(var_name)+1] == var_name+ ' '):
+            if(line[:len(var_name)+1] == var_name+ '['):
                 self._next += '\t' + line + ';\n'
             else:
                 self._next += '\t' + 'var ' + line + ';\n'
