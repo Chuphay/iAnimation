@@ -70,7 +70,7 @@ based upon its previous position."""
         
         self._next += '\t' + lines[-1].strip() +';\n'+ '}\n'
         
-    def animate(self, init, x = 0, y = 1, clear_screan = True):
+    def animate(self, init, x = 0, y = 1, clear_screen = True):
         """init must be a valid array to set the initial position of the object.
         x and y are the coordinates to be drawn. For example, if your function takes an array 
         [x, x_velocity, y, y_velocity] , then your initial position might be pos = [1,0,0,0] and x = pos[0], y = pos[2].
@@ -95,7 +95,7 @@ function main(){{
     requestAnimFrame(function(){{main();}}); 
 }}
 main();
-</script>""".format(comment = '' if clear_screan else '//', init = str(init) , x = str(x), y = str(y))
+</script>""".format(comment = '' if clear_screen else '//', init = str(init) , x = str(x), y = str(y))
         
         raw_html = self._canvas + self._script_start + _request + _draw + self._next + self._main
         return HTML(raw_html)
